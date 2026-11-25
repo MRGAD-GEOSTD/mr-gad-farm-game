@@ -30,20 +30,20 @@ export const Cotton = ({ size = 48 }: { size?: number }) => <Svg size={size}>
 
 export const River = ({ size = 48 }: { size?: number }) => <Svg size={size}>
     <rect x="2" y="8" width="60" height="48" rx="10" fill="#dff1fb" />
-    {[22, 36, 50].map((y) => <path key={y} d={`M6 ${y} q8 -9 14 0 t14 0 t14 0 t10 0`} stroke="#2a8fd0" strokeWidth="5" fill="none" strokeLinecap="round" />)}
+    {[22, 36, 50].map((y) => <path key={y} className="ic-wave" style={{ animationDelay: `${y * 12}ms` }} d={`M6 ${y} q8 -9 14 0 t14 0 t14 0 t10 0`} stroke="#2a8fd0" strokeWidth="5" fill="none" strokeLinecap="round" />)}
 </Svg>;
 
 export const Underground = ({ size = 48 }: { size?: number }) => <Svg size={size}>
     <rect x="2" y="8" width="60" height="48" rx="10" fill="#f6ead2" />
     <path d="M10 26 H54" stroke="#8a5a2b" strokeWidth="4" strokeLinecap="round" />
-    <path d="M32 6 C26 14 22 18 22 22 a10 10 0 0 0 20 0 C42 18 38 14 32 6z" fill="#2a8fd0" />
+    <path className="ic-bob" d="M32 6 C26 14 22 18 22 22 a10 10 0 0 0 20 0 C42 18 38 14 32 6z" fill="#2a8fd0" />
     <path d="M12 46 q8 -8 14 0 t14 0 t12 0" stroke="#2a8fd0" strokeWidth="4" fill="none" strokeLinecap="round" />
 </Svg>;
 
 export const Rain = ({ size = 48 }: { size?: number }) => <Svg size={size}>
     <rect x="2" y="8" width="60" height="48" rx="10" fill="#e8eef7" />
     <path d="M18 34 a9 9 0 0 1 4 -17 a12 12 0 0 1 23 3 a8 8 0 0 1 -2 14 z" fill="#8aa0bd" />
-    {[20, 32, 44].map((x) => <path key={x} d={`M${x} 40 l-3 8 M${x + 2} 46 l-3 8`} stroke="#2a8fd0" strokeWidth="3.5" strokeLinecap="round" />)}
+    {[20, 32, 44].map((x) => <path key={x} className="ic-drop" style={{ animationDelay: `${x * 20}ms` }} d={`M${x} 40 l-3 8 M${x + 2} 46 l-3 8`} stroke="#2a8fd0" strokeWidth="3.5" strokeLinecap="round" />)}
 </Svg>;
 
 export const Leaf = ({ size = 48 }: { size?: number }) => <Svg size={size}>
